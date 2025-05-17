@@ -51,6 +51,23 @@ public class MathController {
 		return math.multiplication(num1, num2);
 	}
 	
+	@GetMapping("/media/{num1}/{num2}")
+	public Double media(
+			@PathVariable Double num1,
+			@PathVariable Double num2
+			) {
+		
+		return math.mean(num1, num2);
+	}
+	
+	@GetMapping("/raiz/{num1}")
+	public Double raiz(
+			@PathVariable Double num1
+			) {
+		
+		return math.squareRoot(num1);
+	}
+	
 	
 
 }
